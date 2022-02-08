@@ -1,5 +1,5 @@
 from cProfile import label
-from msilib.schema import CheckBox
+# from msilib.schema import CheckBox
 import os
 import json
 from tkinter import Button
