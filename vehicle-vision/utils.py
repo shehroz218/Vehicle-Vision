@@ -1,5 +1,5 @@
 # Utils for preprocessing data etc 
-from turtle import st
+# from turtle import st
 import tensorflow as tf
 import googleapiclient.discovery
 from google.api_core.client_options import ClientOptions
