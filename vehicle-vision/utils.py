@@ -5,7 +5,7 @@ import googleapiclient.discovery
 from google.api_core.client_options import ClientOptions
 from tensorflow.keras.applications.mobilenet import preprocess_input
 import numpy as np
-# import cv2
+## import cv2
 import base64
 from tensorflow.keras.preprocessing import image
 
