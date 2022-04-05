@@ -35,16 +35,13 @@ base_classes = ['Ambulance',
 # Model Choice
 choose_model = st.sidebar.selectbox(
     "Pick model you'd like to use",
-    ("Model 1: EffecientNetB3","Model 2: EfficientNetB5")
+    ("Model 1: EffecientNetB0",)
 )
 
-if choose_model == "Model 1: EffecientNetB3":
+if choose_model == "Model 1: EffecientNetB0":
     CLASSES = base_classes
-    MODEL = tf.keras.models.load_model("model_EfficientNetB3.h5")
+    MODEL = tf.keras.models.load_model("model_EfficientNetB0.h5")
 
-if choose_model == "Model 2: EfficientNetB5":
-    CLASSES = base_classes
-    MODEL = tf.keras.models.load_model("model_EfficientNetB5.h5")
 
 # @st.cache
 def make_prediction(image, model, class_names):
