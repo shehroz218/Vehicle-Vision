@@ -40,7 +40,7 @@ choose_model = st.sidebar.selectbox(
 
 if choose_model == "Model 1: EffecientNetB0":
     CLASSES = base_classes
-    MODEL = tf.keras.models.load_model("app/model_EfficientNetB0.h5")
+    MODEL = tf.keras.models.load_model("vehicle-vision/model_EfficientNetB0.h5")
 
 
 # @st.cache
