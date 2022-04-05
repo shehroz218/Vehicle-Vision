@@ -40,11 +40,11 @@ choose_model = st.sidebar.selectbox(
 
 if choose_model == "Model 1: EffecientNetB3":
     CLASSES = base_classes
-    MODEL = tf.keras.models.load_model("D:\Codes\Image-Classification\model_EfficientNetB5.h5")
+    MODEL = tf.keras.models.load_model("model_EfficientNetB3.h5")
 
 if choose_model == "Model 2: EfficientNetB5":
     CLASSES = base_classes
-    MODEL = tf.keras.models.load_model("model_EfficientNetB5")
+    MODEL = tf.keras.models.load_model("model_EfficientNetB5.h5")
 
 # @st.cache
 def make_prediction(image, model, class_names):
