@@ -6,7 +6,7 @@
 # from xml.etree.ElementTree import VERSION
 # from nbformat import write
 # import requests
-import SessionState
+# import SessionState
 import streamlit as st
 import tensorflow as tf
 from tensorflow.keras.applications.efficientnet import preprocess_input
@@ -69,22 +69,22 @@ def make_prediction(image, model, class_names):
 #Upload File
 uploaded_file=st.file_uploader(label="Upload an Image of a Vehicle", type=["png","jpeg","jpg"])
 #Start session State so that site does not load on every interaction
-session_state = SessionState.get(pred_button=False)
+# st.session_state = SessionState.get(pred_button=False)
 
 # Create logic for app flow
 if not uploaded_file:
     st.warning("Please upload an image.")
     st.stop()
 else:
-    session_state.uploaded_image = uploaded_file.read()
-    st.image(session_state.uploaded_image, use_column_width=True)
+    st.session_state.uploaded_image = uploaded_file.read()
+    st.image(st.session_state.uploaded_image, use_column_width=True)
     pred_button = st.button("Predict")
 
 # Did the user press the predict button?
 if pred_button:
-    session_state.pred_button = True 
+    st.session_state.pred_button = True 
 # Make Prediction
-if session_state.pred_button:
-    session_state.image, session_state.pred_class, session_state.pred_conf = make_prediction(session_state.uploaded_image, model=MODEL, class_names=CLASSES)
-    st.write(f"Prediction: {session_state.pred_class}, \
-               Confidence: {session_state.pred_conf:.2f}%")
+if st.session_state.pred_button:
+    st.session_state.image, st.session_state.pred_class, st.session_state.pred_conf = make_prediction(st.session_state.uploaded_image, model=MODEL, class_names=CLASSES)
+    st.write(f"Prediction: {st.session_state.pred_class}, \
+               Confidence: {st.session_state.pred_conf:.2f}%")
