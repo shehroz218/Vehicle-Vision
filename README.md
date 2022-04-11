@@ -8,4 +8,3 @@
 + A combination of Session state and streamlit was used to produce a user friendly vehicle recognition application
 
 
-https://share.streamlit.io/shehroz218/vehicle-vision/main/vehicle-vision/app.py
