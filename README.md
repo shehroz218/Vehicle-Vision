@@ -8,6 +8,6 @@
 + A combination of Session state and streamlit was used to produce a user friendly vehicle recognition application
 
 
-<p align="center">
+
 <img src="/dataset_bias.png"></img>
-</p>
+
