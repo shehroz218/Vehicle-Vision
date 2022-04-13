@@ -9,5 +9,5 @@
 
 
 
-<img src="/dataset_bias.png"></img>
+<img src="data_bias.JPG"></img>
 
